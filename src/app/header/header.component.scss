@@ -1,0 +1,131 @@
+.header-container {
+  position: relative;
+  background: url('/assets/background.jpg') no-repeat center center/cover;
+  background-size: cover;
+  height: 100vh; /* Ocupa toda la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #333;
+  font-family: "Maven Pro", sans-serif;
+  
+  /* Overlay blanquesino */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7); /* Overlay blanco semi-transparente */
+    z-index: 1;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgba(51, 51, 51, 0.8); /* Navbar con fondo más oscuro */
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    z-index: 2; /* Encima del overlay */
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 50px;
+      }
+
+      span {
+        font-size: 24px;
+        font-weight: bold;
+        margin-left: 10px;
+        font-family: "Montserrat", sans-serif;
+      }
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+
+      li {
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-family: "Maven Pro", sans-serif;
+        }
+      }
+    }
+
+    .call-now {
+      background-color: #ffdd57;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+  }
+
+  .hero-section {
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2; /* Encima del overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Asegurarse de que esta sección ocupe toda la altura disponible */
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      font-family: "Montserrat", sans-serif;
+      color: #333;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      font-family: "Maven Pro", sans-serif;
+      color: #333;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      .get-quote, .contact-us {
+        background-color: #7cc142;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+
+      .contact-us {
+        background-color: transparent;
+        border: 2px solid #7cc142;
+        color: #7cc142;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .contact-us:hover {
+        background-color: #7cc142;
+        color: #fff;
+      }
+    }
+
+    .workers-image {
+      margin-top: 40px;
+
+      img {
+        width: 100%;
+        max-width: 600px;
+      }
+    }
+  }
+}

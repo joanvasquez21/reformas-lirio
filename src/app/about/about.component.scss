@@ -1,0 +1,98 @@
+$primary-color: #FFD700;  // Yellow
+$secondary-color: #4CAF50;  // Green
+$text-color: #333;
+$background-color: #FFF;
+$box-shadow-color: rgba(0, 0, 0, 0.1);
+
+// Fuentes
+$font-title: "Montserrat", sans-serif;
+$font-body: "Maven Pro", sans-serif;
+
+// Global Styles
+body {
+    font-family: $font-body;
+    color: $text-color;
+    background-color: $background-color;
+    margin: 0;
+    padding: 0;
+}
+
+// Flex container with space between elements
+.landing-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero, .why-choose-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    background-color: $primary-color;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px $box-shadow-color;
+
+    &-content {
+        flex: 1;
+        max-width: 50%;
+        padding-right: 20px;
+        color: $text-color;
+        font-family: $font-body;  // Fuente Maven Pro para descripciones
+    }
+
+    &-image {
+        flex: 1;
+        max-width: 50%;
+        text-align: right;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px $box-shadow-color;
+        }
+    }
+}
+
+.cta-button {
+    background-color: $secondary-color;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+h1, h2 {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-family: $font-title;  // Fuente Montserrat para títulos
+}
+
+// Ajustes para pantallas pequeñas
+@media (max-width: 768px) {
+    .hero, .why-choose-us {
+        flex-direction: column;
+        text-align: center;
+
+        &-content {
+            max-width: 100%;
+            padding-right: 0;
+        }
+
+        &-image {
+            max-width: 100%;
+            text-align: center;
+
+            img {
+                max-width: 80%;
+            }
+        }
+    }
+}
