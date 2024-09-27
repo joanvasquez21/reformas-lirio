@@ -34,6 +34,9 @@
     .logo {
       display: flex;
       align-items: center;
+      background: url('/assets/logo-bg.png') no-repeat center center/contain; /* Fondo para el logotipo */
+      padding: 10px; /* Ajusta el espaciado según sea necesario */
+      border-radius: 8px; /* Opcional: agrega bordes redondeados */
 
       img {
         width: 50px;
