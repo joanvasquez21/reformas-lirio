@@ -31,21 +31,28 @@
     position: relative;
     z-index: 2; /* Encima del overlay */
 
-    .logo {
+    .logo-container {
       display: flex;
       align-items: center;
-      background: url('/assets/logo.png') no-repeat center center/contain; /* Fondo para el logotipo */
-      padding: 10px; /* Ajusta el espaciado según sea necesario */
-      border-radius: 8px; /* Opcional: agrega bordes redondeados */
 
-      img {
-        width: 50px;
+      .logo {
+        display: flex;
+        align-items: center;
+        background: no-repeat center center/contain; /* Sin fondo adicional aquí */
+        padding: 10px; /* Ajusta el espaciado según sea necesario */
+
+        .logo-img {
+          width: 80px;
+          height: auto; /* Mantiene la relación de aspecto */
+        }
+      
       }
 
-      span {
+      .logo-text {
         font-size: 24px;
         font-weight: bold;
-        margin-left: 10px;
+        margin-left: -10px;
+        margin-bottom: -16px;
         font-family: "Montserrat", sans-serif;
       }
     }
@@ -149,4 +156,11 @@
       }
     }
   }
+}
+
+.header-container[_ngcontent-ng-c2429135880] .navbar[_ngcontent-ng-c2429135880] .nav-links[_ngcontent-ng-c2429135880] {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
