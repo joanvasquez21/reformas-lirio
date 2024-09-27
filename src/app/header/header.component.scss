@@ -62,9 +62,18 @@
     }
 
     .call-now {
-      background-color: #ffdd57;
-      padding: 5px 10px;
+      background-color: #ffd600; /* Amarillo brillante */
+      color: #333;
+      padding: 10px 20px;
       border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        background-color: #f7e9a0; /* Amarillo más claro al pasar el ratón */
+      }
     }
   }
 
@@ -102,8 +111,17 @@
         background-color: #7cc142;
         color: #fff;
         border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
+        padding: 15px 30px; /* Hacer el botón más grande */
+        border-radius: 10px; /* Bordes más redondeados */
+        font-size: 18px; /* Tamaño de fuente más grande */
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+          background-color: #6ba83d;
+          transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+        }
       }
 
       .contact-us {
@@ -111,11 +129,11 @@
         border: 2px solid #7cc142;
         color: #7cc142;
         transition: background-color 0.3s ease, color 0.3s ease;
-      }
 
-      .contact-us:hover {
-        background-color: #7cc142;
-        color: #fff;
+        &:hover {
+          background-color: #7cc142;
+          color: #fff;
+        }
       }
     }
 
